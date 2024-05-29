@@ -1,0 +1,19 @@
+{
+    "rewrites": [
+        {
+            "source": "/distribution/:path*",
+            "destination": "https://objectstorage.uk-london-1.oraclecloud.com/n/lrarf8ozesjn/b/bucket-20220130-2329/o/distribution/:path*"
+        },
+        {
+            "source": "/release-notes/rss",
+            "destination": "https://api.paperlib.app/release-notes/rss"
+        }
+    ],
+    "redirects": [
+        {
+            "source": "/",
+            "destination": "/en/",
+            "permanent": true
+        }
+    ]
+}

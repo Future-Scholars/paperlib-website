@@ -1,0 +1,36 @@
+name: Build Website Test
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize]
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-versions: ["18.12.0"]
+
+    steps:
+      - name: "Checkout Project"
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+
+      - name: Setup NodeJS Environment ${{ matrix.node-versions }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: "Install Node Module"
+        run: npm install --force
+
+      - name: "Build"
+        run: npm run build
