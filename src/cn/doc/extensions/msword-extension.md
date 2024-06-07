@@ -71,3 +71,7 @@
 链接图标表示无法与 Paperlib 通信，点击它可以重新连接或者重启 Paperlib 重试。
 
 ![](/assets/images/guide/extensions/word/others.png)
+
+## 使用代理时的问题
+
+如果你的电脑打开了代理，可能会导致插件无法正常于 Paperlib 通信。请在你的代理软件中，添加 `https://localhost2.paperlib.app` 为直连模式。

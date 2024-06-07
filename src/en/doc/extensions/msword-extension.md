@@ -71,3 +71,7 @@ You can change the citation style and the reference list style. To import new CS
 The link icon means that the add-in cannot communicate with the Paperlib app, so you need to click it to retry, restart Paperlib, or reload the add-in.
 
 ![](/assets/images/guide/extensions/word/others.png)
+
+## Issues with Proxy
+
+If you are using a proxy, you may encounter issues with the add-in. Please make sure that the domain `https://localhost2.paperlib.app` is in the direct connection mode in your proxy software.
