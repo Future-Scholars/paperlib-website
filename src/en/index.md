@@ -3,7 +3,7 @@ layout: home
 
 hero:
   name: Paperlib
-  text: to organise academic papers decently. 
+  text: to organize academic papers decently. 
   tagline: An open-source and simple academic paper management tool.
   image:
     src: /assets/images/ui.png
