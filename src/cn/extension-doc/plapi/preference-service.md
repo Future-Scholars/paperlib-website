@@ -108,6 +108,7 @@ declare interface IPreferenceStore {
     shortcutFlag: string;
     shortcutCopyKey: string;
     shortcutDelete: string;
+    shortcutImportFrom: string;
     sidebarWidth: number;
     detailPanelWidth: number;
     mainviewSortBy: string;

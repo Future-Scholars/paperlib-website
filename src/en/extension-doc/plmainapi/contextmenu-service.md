@@ -62,6 +62,7 @@ unregisterContextMenu(extID: string): void;
 | `dataContextMenuShowInFinderClicked` | `{key: 'dataContextMenuShowInFinderClicked'}` | When `Show in Finder` is clicked in the context menu of a paper in the library |
 | `dataContextMenuEditClicked` | `{key: 'dataContextMenuEditClicked'}` | When `Edit` is clicked in the context menu of a paper in the library |
 | `dataContextMenuScrapeClicked` | `{key: 'dataContextMenuScrapeClicked'}` | When `Scrape` is clicked in the context menu of a paper in the library |
+| `dataContextMenuFuzzyScrapeClicked` | `{key: 'dataContextMenuFuzzyScrapeClicked'}` | When `Fuzzily Scrape` is clicked in the context menu of a paper in the library |
 | `dataContextMenuDeleteClicked` | `{key: 'dataContextMenuDeleteClicked'}` | When `Delete` is clicked in the context menu of a paper in the library |
 | `dataContextMenuFlagClicked` | `{key: 'dataContextMenuFlagClicked'}` | When `Flag` is clicked in the context menu of a paper in the library |
 | `dataContextMenuExportBibTexClicked` | `{key: 'dataContextMenuExportBibTexClicked'}` | When `Export BibTex` is clicked in the context menu of a paper in the library |

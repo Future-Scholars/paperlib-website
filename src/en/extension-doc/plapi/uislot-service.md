@@ -22,6 +22,16 @@ updateSlot(slotID: keyof IUISlotState, patch: {
 }): Promise<void>;
 ```
 
+```typescript
+/**
+  * Delete an item from a slot
+  * @param slotID - The slot to delete from
+  * @param itemID - The item to delete
+  * @returns
+  */
+deleteSlotItem(slotID: keyof IUISlotState, itemID: string): void;
+```
+
 ## Avaliable Slots
 
 ```typescript

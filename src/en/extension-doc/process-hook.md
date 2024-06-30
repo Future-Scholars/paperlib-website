@@ -245,3 +245,41 @@ In general, when exporting references, we need to get the array of `PaperEntity`
 | Location | At the end of the `exportPlainText()` method |
 | Callback arguments | `string` |
 | Callback Return Value | ArgumentArray<`string`> |
+
+
+## Fuzzy Metadata Scraping Process
+
+When the user clicks on the fuzzy search, the selected paper will go through this process to get the metadata of the fuzzy search.
+
+In this process, the main hook points are in the `fuzzyScrape()` method of `ScrapeService`.
+
+The `fuzzyScrape()` method accepts an array of `PaperEntity` and outputs a mapping of the `id` of each paper to the candidate metadata.
+
+The main available hooks are as follows:
+
+### `beforeFuzzyScrape
+
+| Parameter | Value |
+| --- | --- |
+| Type | `Modify` |
+| Location | At the very beginning of the `fuzzyScrape()` method |
+| Callback arguments | `PaperEntity[]` |
+| Callback Return Value | ArgumentArray<`PaperEntity[]`> |
+
+### `fuzzyScrape`
+
+| Parameter | Value |
+| --- | --- |
+| Type | `Transform` |
+| Location | The main hook point of `fuzzyScrape()`, accepts an array of `PaperEntity`, and outputs an array of `PaperEntity` arrays |
+| Callback arguments | `paperEntities: PaperEntity[]` |
+| Callback Return Value | `PaperEntity[][]` |
+
+### `afterFuzzyScrape`
+
+| Parameter | Value |
+| --- | --- |
+| Type | `Modify` |
+| Location | At the end of the `fuzzyScrape()` method, after searching for metadata |
+| Callback arguments | `paperEntityDraftCandidates: PaperEntity[][]` |
+| Callback Return Value | ArgumentArray<`paperEntityDraftCandidates: PaperEntity[][]`> |

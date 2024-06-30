@@ -47,3 +47,10 @@ PLAPI.uiSlotService.updateSlot(
 ```
 
 `id` 是内容的唯一标识符。如果 `id` 已经在插槽中，内容将被更新。否则，将添加新内容。
+
+### 插槽删除
+
+```typescript
+PLAPI.uiSlotService.deleteSlotItem("paperDetailsPanelSlot1", <id>);
+```
+

@@ -246,3 +246,40 @@ interface WebContentSourcePayload {
 | Callback 参数 | `string` |
 | Callback 返回值 | 参数数组<`string`> |
 
+
+## 模糊元数据搜刮流程
+
+在用户点击模糊搜索之后，用户选中的论文，会经过这个流程，得到模糊搜索的元数据。
+
+该流程中，主要的钩子点都在 `ScrapeService` 的 `fuzzyScrape()` 方法中。
+
+`fuzzyScrape()` 接受 `Array<PaperEntity>`, 输出 `Record<string, Array<PaperEntity>>`，即每个论文的 `id` 于候选 metadata 的映射。
+
+可用的钩子如下：
+
+### `beforeFuzzyScrape
+
+| 参数 | 值 |
+| --- | --- |
+| 类型 | `Modify` |
+| 位置 | `fuzzyScrape()` 方法的最开始，还未搜寻 metadata 之前 |
+| Callback 参数 | `paperEntities: PaperEntity[]` |
+| Callback 返回值 | 参数数组<`paperEntities: PaperEntity[]`> |
+
+### `fuzzyScrape`
+
+| 参数 | 值 |
+| --- | --- |
+| 类型 | `Transform` |
+| 位置 | `fuzzyScrape()` 的主要钩子点，接受 `PaperEntity` 数组，返回一个数组，每个元素是对应论文的候选匹配数组，即类型为 `PaperEntity[][]` |
+| Callback 参数 | `paperEntities: PaperEntity[]` |
+| Callback 返回值 | `PaperEntity[][]` |
+
+### `afterFuzzyScrape`
+
+| 参数 | 值 |
+| --- | --- |
+| 类型 | `Modify` |
+| 位置 | `fuzzyScrape()` 方法的最后，已经搜寻 metadata 之后 |
+| Callback 参数 | `paperEntityDraftCandidates: PaperEntity[][]` |
+| Callback 返回值 | 参数数组<`paperEntityDraftCandidates: PaperEntity[][]`> |

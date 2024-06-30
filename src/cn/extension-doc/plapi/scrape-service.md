@@ -43,3 +43,14 @@ scrapeEntry(payloads: any[]): Promise<PaperEntity[]>;
  * @returns List of paper entities. */
 scrapeMetadata(paperEntityDrafts: PaperEntity[], scrapers: string[], force?: boolean): Promise<PaperEntity[]>;
 ```
+
+
+### `fuzzyScrape`
+
+```typescript
+/**
+ * Scrape a data source's metadata fuzzily.
+ * @param payloads - data source payloads.
+ * @returns List of paper entities' candidates. */
+fuzzyScrape(paperEntities: IPaperEntityCollection): Promise<Record<string, PaperEntity[]>>;
+```

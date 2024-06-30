@@ -28,7 +28,7 @@ getSystemPath(key: "home" | "appData" | "userData" | "sessionData" | "temp" | "e
  * Show a file picker.
  * @returns {Promise<OpenDialogReturnValue>} The result of the file picker.
  */
-showFilePicker(): Promise<OpenDialogReturnValue>;
+showFilePicker(props?: Array<"openDirectory" | "multiSelections" | "showHiddenFiles" | "createDirectory" | "promptToCreate" | "noResolveAliases" | "treatPackageAsDirectory" | "dontAddToRecent">): Promise<OpenDialogReturnValue>;
 ```
 
 ### `showFolderPicker`

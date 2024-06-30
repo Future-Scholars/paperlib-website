@@ -47,3 +47,9 @@ PLAPI.uiSlotService.updateSlot(
 ```
 
 `id` is the unique identifier of the content. If the `id` is already in the slot, the content will be updated. Otherwise, a new content will be added.
+
+### Delete Slot
+
+```typescript
+PLAPI.uiSlotService.deleteSlotItem("paperDetailsPanelSlot1", <id>);
+```
