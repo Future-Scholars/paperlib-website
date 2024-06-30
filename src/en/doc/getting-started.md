@@ -32,6 +32,10 @@ The `.bib` file and the `.csv` file exported from Zotero are also supported.
 
 The metadata of each imported paper will be automaticlly scraped. Some papers may match nothing in the databases, thereby resulting in an empty/wrong paper item. You can manually edit its metadata by pressing `CTRL/CMD + E` or by clicking the edit button. Providing one of the title / DOI / arxivID and click the `Scrape` button to complete the rest is enough for most cases.
 
+In addition, you can use the fuzzy scraping feature to find multiple possible matches.
+
+![](/assets/images/getting-started/fuzzyscrape.png)
+
 ## Open / Preview a Paper
 
 - Open a paper: double click an item in the main view. 
