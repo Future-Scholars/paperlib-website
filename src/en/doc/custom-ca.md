@@ -3,8 +3,8 @@
 In some cases, you may need to use a custom root CA to access the network. You can put the custom root CA file in the following directory:
 
 - macOS: `~/Library/Application Support/paperlib/`
-- Windows: `%APPDATA%/paperlib/extensions/`
-- Linux: `~/.config/paperlib/extensions/`
+- Windows: `%APPDATA%/paperlib/`
+- Linux: `~/.config/paperlib/`
 
 In this directory, please rename the required files to:
 
