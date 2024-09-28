@@ -1,4 +1,12 @@
-# Cloud Sync
+# IMPORTANT NOTICE:
+
+We received some bad news in September 2024: MongoDB has deprecated the database synchronisation feature without notifying our developers, and Paperlib's multi-device synchronisation heavily relies on this. Currently, new users can no longer follow the tutorial below to synchronise data across multiple devices. Existing users will still be able to use the synchronisation feature until Sep 2025.
+
+We understand that this will have a significant impact on many users' experiences.
+
+In response, we are developing our own synchronisation server. We will complete this feature as soon as possible.
+
+# <del>Cloud Sync</del>
 
 ---
 
