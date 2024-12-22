@@ -11,7 +11,7 @@ class PaperlibHelloworldExtension extends PLExtension {
         id: "...",
         defaultPreference: {
             [id: string]: {
-                type: "string" | "boolean" | "options" | "pathpicker", 
+                type: "string" | "boolean" | "options" | "pathpicker" | "button" | "hidden", 
                 name: string,
                 description: string,
                 value: string | boolean,
@@ -46,6 +46,8 @@ class PaperlibHelloworldExtension extends PLExtension {
 - `boolean`：布尔类型的设置项，用户可以选择 `true` 或 `false`。
 - `options`：选项类型的设置项，用户可以从预定义的选项中选择一个。必须提供 `options` 字段，其中的每个键值对，都是一个选项。键是选项的值，值是选项的显示名称。
 - `pathpicker`：路径选择器类型的设置项，用户可以选择一个文件或文件夹。
+- `button`：按钮类型的设置项，用户可以点击按钮来执行一些操作。
+- `hidden`：隐藏类型的设置项，不会在设置界面中显示。
 
 不同的设置项类型，Paperlib 会显示不同的组件用于方便用户设置。
 

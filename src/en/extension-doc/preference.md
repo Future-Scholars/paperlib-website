@@ -11,7 +11,7 @@ class PaperlibHelloworldExtension extends PLExtension {
         id: "...",
         defaultPreference: {
             [id: string]: {
-                type: "string" | "boolean" | "options" | "pathpicker", 
+                type: "string" | "boolean" | "options" | "pathpicker" | "button" | "hidden", 
                 name: string,
                 description: string,
                 value: string | boolean,
@@ -43,6 +43,8 @@ As shown above, we provide four types of preferences:
 - `boolean`: Boolean type preference, the user can choose `true` or `false`.
 - `options`: Option type preference, the user can select one from the predefined options. The `options` field must be provided, and each key-value pair in it is an option. The `key` is the identical value of the option, and the `value` is the display name of the option.
 - `pathpicker`: Path picker type preference, the user can select a file or folder.
+- `button`: Button type preference, the user can click the button to perform some operations.
+- `hidden`: Hidden type preference, will not be displayed in the preference interface.
 
 Different types of preferences will display different components in Paperlib.
 
